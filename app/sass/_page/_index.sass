@@ -1,0 +1,324 @@
+//------------------------index style--------------------
+
+.about
+
+	&__container
+		position: relative
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		align-items: center
+		padding: 120px 0 0 0
+
+
+		&:nth-child(2n)
+			flex-direction: row-reverse
+			text-align: right
+			&::before, 
+				left: auto
+				right: -3px
+			&::after
+				left: auto
+				right: 0
+
+			.about__container_item--img
+				&::before
+					left: 0
+					right: auto
+				img
+					margin-left: 0
+					margin-right: auto
+
+			.about__text
+				padding-left: 0
+				&::before
+					display: none
+
+			.number
+				left: auto
+				right: 0
+		
+		&:last-child
+			margin-bottom: 150px
+
+		&_item
+			width: 50%
+			z-index: 2
+
+			&--img
+				position: relative
+				z-index: 1
+				&::before
+					content: ''
+					position: absolute
+					right: 0
+					height: 100%
+					width: 145%
+					background: #eaeaea
+					z-index: -1
+
+				img
+					margin-left: auto
+					display: flex
+
+	&__text
+		position: relative
+		padding-left: 160px
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			top: 12px
+			width: 95px
+			height: 2px
+			background: $white__title
+
+.portfolio
+	position: relative
+	padding-top: 130px
+	z-index: 2
+
+	.number
+		left: auto
+		bottom: auto
+		right: 30px
+		top: 120px
+
+	&__line
+		height: 100%
+
+	&__title-line
+		&::before
+			width: 150px
+			left: 180px
+			right: auto
+
+		&::after
+			left: 330px
+			right: auto
+			width: 6px
+			height: 6px
+	
+	h2
+		margin-bottom: 70px
+		letter-spacing: 4px
+
+	&__slider
+
+		&_slide
+			margin-bottom: 130px
+			img
+				width: 350px
+				height: 205px
+				margin-bottom: 20px
+
+			p
+				text-transform: uppercase
+				font-size: 14px
+				font-weight: 500
+				letter-spacing: .7px
+
+			.title-line
+				&::before
+					bottom: -3px
+				&::after
+					bottom: -5px
+
+	.swiper-button-next, .swiper-button-prev
+		top: auto
+		background: none
+		text-transform: uppercase
+		font-size: 12px
+		font-weight: 700
+		letter-spacing: .5px
+		bottom: 30px
+		width: 150px
+		height: 20px
+		transition: all .3s
+	
+	.swiper-button-next
+		right: 35%
+
+		&:hover, &:focus
+			right: 34%
+
+
+	.swiper-button-prev
+		left: 33%
+		text-align: right
+
+		&:hover, &:focus
+			left: 32%
+
+	&__next
+		position: absolute
+		right: 10px	
+		top: 50%
+
+		&::before, &::after
+			top: 50%
+			right: 0
+			left: auto
+
+		&::before
+			width: 70px
+
+		&::after
+			width: 7px
+			height: 7px
+			transform: translate(0, -50%)			
+
+		&:hover, &:focus
+			right: 0
+
+	&__prev
+		position: absolute
+		left: 10px	
+		top: 50%
+
+		&::before, &::after
+			top: 50%
+			left: 0
+			right: auto
+
+		&::before
+			width: 70px
+
+		&::after
+			width: 7px
+			height: 7px
+			transform: translate(0, -50%)
+
+		&:hover, &:focus
+			left: 0
+
+.act
+	position: relative
+	padding: 110px 0
+	z-index: 3
+
+	&__sub-title
+		margin-bottom: 35px
+		font-size: 16px
+
+	h2
+		letter-spacing: 4px
+		margin-bottom: 40px
+
+
+	&__container
+		display: flex
+
+
+	&__info
+		width: 33%
+		&_link
+			margin-bottom: 20px
+			display: flex
+			flex-direction: column
+
+			span
+				display: block
+				font-size: 12px
+				line-height: 1
+				margin-bottom: 5px
+				
+			a
+				width: 80%
+				font-size: 14px
+				line-height: 1
+				letter-spacing: 2px
+				text-transform: uppercase
+				position: relative
+
+				&::before, &::after
+					content: ""
+					position: absolute
+					left: 0
+					bottom: -5px
+					background: $white
+					transition: all .3s
+					opacity: 0
+
+				&::before
+					width: 0
+					height: 1px
+					bottom: -3px
+					left: 5%
+
+				&::after
+					width: 5px
+					height: 5px
+					border-radius: 100%
+					left: 5%
+
+				&:hover, &:focus
+					&::before, &::after
+						opacity: 1
+
+					&::before
+						width: 95%
+					&::after
+						left: 100%
+
+
+				&:last-child
+					margin-bottom: 0
+
+			&--tel
+				a
+					font-size: 21px
+					font-weight: 700
+
+	&__block
+		padding-top: 50px
+		width: 67%
+		text-transform: uppercase
+		font-size: 21px
+		line-height: 1
+		font-weight: 700
+
+		&_line
+			display: flex
+			justify-content: space-between
+
+			a
+				position: relative
+				width: 48%
+				padding-bottom: 45px
+				letter-spacing: 1px
+
+				&::before, &::after
+					content: ""
+					position: absolute
+					background: $white
+					transition: all .3s
+
+				&::before
+					left: 0
+					width: 65%
+					height: 3px
+					bottom: -2px
+
+				&::after
+					right: 20%
+					width: 8px
+					height: 8px
+					border-radius: 100%
+					bottom: -4px
+
+				&:hover, &:focus
+					
+					&::before
+						width: 75%
+
+					&::after
+						right: 10%
+
+
+	&__hr
+		display: block
+		width: 100%
+		height: 1px
+		background: #333
+		margin-bottom: 40px

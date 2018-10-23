@@ -1,0 +1,326 @@
+@import "libs"
+@import "base"
+
+
+//------------------------custom style--------------------
+.title-line
+	position: relative
+	&::before, &::after
+		content: ""
+		position: absolute
+		right: -6px
+		bottom: 0
+		background: $white
+		transition: all .3s
+	&::before
+		width: 17px
+		height: 1px
+		bottom: 2px
+	&::after
+		width: 5px
+		height: 5px
+		border-radius: 100%
+
+.line
+	border-left: 2px solid #000
+	box-shadow: -5px 0px 10px 7px rgba(0,0,0,.5)
+	&:nth-child(2)
+		box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.5)
+	&:nth-child(3)
+		box-shadow: 5px 0px 10px 7px rgba(0,0,0,.5)
+
+.sub-title
+	font-size: 21px
+	line-height: 1
+	color: $white__sub-title
+	font-weight: 600
+	margin-bottom: 15px
+	text-transform: uppercase
+	letter-spacing: 1.3px
+
+.number
+	position: absolute
+	left: 0
+	bottom: 0
+	font-size: 30px
+	font-weight: 900
+	color: $white__title
+
+.logo
+	display: block
+	font-weight: 700
+	line-height: .7
+	font-size: 32px
+	margin-left: 25px
+	span
+		font-size: 21px
+		font-weight: 300
+		letter-spacing: .7px
+
+.decoration
+	position: absolute
+	top: 0
+	left: -15px
+	&::before, &::after
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		background: $dark
+	&::before
+		top: 100px
+		left: -3px
+		height: 7px
+		width: 7px
+		border-radius: 100%
+	&::after
+		height: 100px
+		width: 2px
+
+	&--reverse
+		right: 3px
+		left: auto
+
+	&--bottom
+		top: auto
+		bottom: 0
+		left: 0
+
+
+//------------------------base style--------------------
+.header
+	overflow: hidden
+	background-color: #0f0f0f
+
+	&__logo
+		margin-bottom: 150px
+
+	&__line
+		padding-top: 30px
+		padding-bottom: 30px
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		&:nth-child(2)
+			padding-top: 60px
+			padding-bottom: 220px
+			justify-content: space-between
+		&:nth-child(3)
+			padding-top: 60px
+			justify-content: space-between
+			align-items: flex-end
+			span, a
+				text-transform: uppercase
+				color: $white
+
+			a
+				transition: all .3s
+				&:hover, &:focus
+					font-weight: 700
+
+	&__title-line
+		&::before, &::after
+			right: -85px
+		&::before
+			width: 170px
+			bottom: 10px
+		&::after
+			bottom: 7px
+			width: 8px
+			height: 8px
+
+	&__sub-title
+		text-align: right
+		text-transform: uppercase
+		font-size: 21px
+		font-weight: 600
+		color: $white
+		line-height: 1.4
+	
+	&__next
+		text-transform: uppercase
+		font-size: 12px
+		font-weight: 700
+		transform: rotate(-90deg)
+		
+		&:hover, &:focus
+			.header__next_title-line
+				&::before, &::after
+					left: -110px
+
+		&_title-line
+			letter-spacing: 1px
+			transition: all .3s
+			&::before, &::after
+				transition: all .3s
+				right: auto
+				left: -100px
+			&::before
+				width: 50px
+				bottom: -5px
+			&::after
+				bottom: -8px
+				width: 8px
+				height: 8px
+
+	&__language
+		display: flex
+		flex-direction: column
+
+
+		&_title-line
+			&::before, &::after
+				display: none
+				
+		a
+			position: relative
+
+			&::before, &::after
+				content: ""
+				position: absolute
+				left: 0
+				bottom: -5px
+				background: $white
+				transition: all .3s
+				opacity: 0
+
+			&::before
+				width: 0
+				height: 1px
+				bottom: -3px
+				left: 5%
+
+			&::after
+				width: 5px
+				height: 5px
+				border-radius: 100%
+				left: 5%
+
+			&:hover, &:focus
+				&::before, &::after
+					opacity: 1
+
+				&::before
+					width: 95%
+				&::after
+						left: 100%
+		
+.nav
+	text-align: right
+	text-transform: uppercase
+
+	a
+		position: relative
+		padding-right: 30px
+		padding-bottom: 5px
+		transition: all .3s
+		&::before
+			content: ""
+			position: absolute
+			right: 17px
+			bottom: 0
+			height: 1px
+			width: 0
+			background: $white
+
+		span
+			display: none
+			position: absolute
+			right: 0
+			bottom: -3px
+			font-size: 10px
+			line-height: 1
+
+		&:hover, &:focus
+			font-weight: 700
+			letter-spacing: .5px
+			&::before
+				width: 35px
+
+			span
+				display: block
+
+.section
+	background: $white
+
+	&--dark
+		background: $dark
+		color: #fff
+		z-index: 1
+
+		.container
+			position: relative
+
+		.row
+			position: absolute
+			top: 0
+			width: 100%
+			height: 100%
+			z-index: 1
+
+		h2, h3, p, span
+			color: #fff
+
+.footer
+	position: relative
+	overflow: hidden
+	z-index: 1
+
+	.row
+		z-index: -1
+
+	&__container
+		padding: 40px 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		z-index: 1
+	
+	&__nav
+		ul
+			display: flex
+
+		li
+			margin-right: 40px
+			&:last-child
+				margin-right: 0
+
+		a
+			text-transform: uppercase
+			font-weight: 700
+			position: relative
+
+			&::before, &::after
+				content: ""
+				position: absolute
+				left: 0
+				bottom: -5px
+				background: $white
+				transition: all .3s
+				opacity: 0
+
+			&::before
+				width: 0
+				height: 1px
+				bottom: -3px
+				left: 5%
+
+			&::after
+				width: 5px
+				height: 5px
+				border-radius: 100%
+				left: 5%
+
+			&:hover, &:focus
+				&::before, &::after
+					opacity: 1
+
+				&::before
+					width: 95%
+				&::after
+						left: 100%
+
+
+
+@import "page"
+@import "media" // Always at the end
