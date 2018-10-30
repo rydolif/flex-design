@@ -8,20 +8,28 @@
 		justify-content: space-between
 		flex-wrap: wrap
 		align-items: center
-		padding: 120px 0 0 0
-
+		padding-top: 120px
 
 		&:nth-child(2n)
 			flex-direction: row-reverse
 			text-align: right
+			padding-bottom: 120px
+
 			&::before, 
 				left: auto
 				right: -3px
+
 			&::after
 				left: auto
 				right: 0
 
+			.number
+				bottom: 120px
+
 			.about__container_item--img
+				margin-left: -15px
+				margin-right: auto
+
 				&::before
 					left: 0
 					right: auto
@@ -37,9 +45,6 @@
 			.number
 				left: auto
 				right: 0
-		
-		&:last-child
-			margin-bottom: 150px
 
 		&_item
 			width: 50%
@@ -48,6 +53,8 @@
 			&--img
 				position: relative
 				z-index: 1
+				margin-right: -15px
+
 				&::before
 					content: ''
 					position: absolute
@@ -108,8 +115,9 @@
 		&_slide
 			margin-bottom: 130px
 			img
-				width: 350px
-				height: 205px
+				width: 100%
+				height: 100%
+				max-height: 205px
 				margin-bottom: 20px
 
 			p
@@ -212,6 +220,7 @@
 
 	&__info
 		width: 33%
+
 		&_link
 			margin-bottom: 20px
 			display: flex
@@ -261,7 +270,6 @@
 					&::after
 						left: 100%
 
-
 				&:last-child
 					margin-bottom: 0
 
@@ -283,38 +291,7 @@
 			justify-content: space-between
 
 			a
-				position: relative
 				width: 48%
-				padding-bottom: 45px
-				letter-spacing: 1px
-
-				&::before, &::after
-					content: ""
-					position: absolute
-					background: $white
-					transition: all .3s
-
-				&::before
-					left: 0
-					width: 65%
-					height: 3px
-					bottom: -2px
-
-				&::after
-					right: 20%
-					width: 8px
-					height: 8px
-					border-radius: 100%
-					bottom: -4px
-
-				&:hover, &:focus
-					
-					&::before
-						width: 75%
-
-					&::after
-						right: 10%
-
 
 	&__hr
 		display: block

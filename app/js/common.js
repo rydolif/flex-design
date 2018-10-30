@@ -7,15 +7,35 @@ $(function() {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+       breakpoints: {
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        776: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        }
+      }
     });
 
-  //-------------------------скорость якоря---------------------------------------
+  //-------------------------стрелка в низ---------------------------------------
     $(".header__next").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top - 0}, 'slow', 'swing');
     });
+
+  //-------------------------скорость якоря---------------------------------------
+    $(".nav__click").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top - 0}, 'slow', 'swing');
+    });
+
+
 
 });
 

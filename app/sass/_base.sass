@@ -21,7 +21,7 @@ $accent: #0f0f0f
 body
 	overflow-x: hidden
 	position: relative
-	min-width: 320px
+	min-width: 380px
 	font-family: $fonts
 	font-size: 16px
 	color: $white__text
@@ -59,7 +59,7 @@ h1
 h2
 	font-size: 48px
 	line-height: 1.2
-	letter-spacing: 1.3px
+	letter-spacing: 1.5px
 	color: $white__title
 	margin-bottom: 40px
 	span
@@ -67,6 +67,10 @@ h2
 		font-size: 30px
 		line-height: 1.2
 		font-weight: 700
+
+h3
+	color: $white__title
+	margin-bottom: 10px
 
 a
 	color: $white
@@ -83,27 +87,59 @@ i
 	color: #fff
 
 input, textarea
-	border: #808080 1px solid
+	border: none
 	border-radius: 0
 	outline: none
 	box-shadow: none
 	-webkit-appearance: none
+	background-color: transparent
+	color: #fff
+	line-height: 1
+	font-size: 14px
+	width: 100%
+	border-bottom: 1px solid transparent
+	transition: all .3s
+
 	&:focus:required:invalid
-		border-color: #808080
+		border: none
+		border-bottom: 1px solid #fff
 		outline: none
 		box-shadow: none
 		-webkit-appearance: non
+
 	&:required:valid
-		border-color: #808080
+		border-bottom: 1px solid #fff
+		border: none
 		outline: none
 		box-shadow: none
 		-webkit-appearance: non
 
 	&::placeholder
-		color: #808080
-		font-size: 12px
+		color: rgba(255, 255, 255, .6)
+		line-height: 1
+		font-size: 14px
 		text-transform: uppercase
 		line-height: 1
+	
+	&:hover, &:active
+		border-bottom: 1px solid #fff
+
+input
+	padding: 25px 0
+
+
+textarea
+	height: 100px
+
+label
+	width: 200px
+	text-transform: uppercase
+	color: #fff
+	line-height: 1
+	letter-spacing: .5px
+	font-size: 14px
+	font-weight: 500
+	margin-bottom: 0
 
 b, strong
 	font-weight: 700
