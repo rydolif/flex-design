@@ -1,5 +1,14 @@
 $(function() {
 
+
+  //------------------------------гамбургер-----------------------------
+    $('.hamburger').click(function() {
+      $(this).toggleClass('hamburger--active');
+      $('nav').toggleClass('nav--active');
+      $('header').toggleClass('header--menu');
+    });
+
+  //------------------------------слайдер-----------------------------
     var swiper = new Swiper('.portfolio__slider', {
       slidesPerView: 3,
       spaceBetween: 30,
@@ -34,8 +43,6 @@ $(function() {
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top - 0}, 'slow', 'swing');
     });
-
-
 
 });
 

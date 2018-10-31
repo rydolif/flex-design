@@ -9,8 +9,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" href="img/favicon.ico">
 	<meta name="theme-color" content="#000">
-
-	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
@@ -22,10 +20,14 @@
 	<header class="header">
 		<div class="container header__container">
 
-			<span class="line--dark"></span>
-			<span class="line--dark"></span>
-			<span class="line--dark"></span>
-			<span class="line--dark"></span>
+			<div class="row header__row">
+				<div class="line col-lg-4">
+				</div>
+				<div class="line col-lg-4">
+				</div>
+				<div class="line col-lg-4">
+				</div>
+			</div>
 
 			<div class="row">
 
@@ -36,6 +38,12 @@
 						<br>
 						<span class="title-line">design</span>
 					</a>
+
+					<button class="hamburger" type="button">
+						<span class="hamburger__box">
+							<span class="hamburger__item"></span>
+						</span>
+					</button>
 
 					<div class="header__language--responsive header__language">
 						<ul>
@@ -93,10 +101,6 @@
 		<section class="about section">
 			<div class="container">
 
-				<span class="line--white"></span>
-				<span class="line--white"></span>
-				<span class="line--white"></span>
-				<span class="line--white"></span>
 
 				<div class="about__container"  id="top">
 					<div class="about__container_item">
@@ -141,11 +145,6 @@
 
 		<section class="section section--dark">
 			<div class="container">
-
-				<span class="line--dark"></span>
-				<span class="line--dark"></span>
-				<span class="line--dark"></span>
-				<span class="line--dark"></span>
 
 				<div class="portfolio">
 
@@ -229,11 +228,6 @@
 		<div class="container">
 			<div class="footer__container">
 
-				<span class="line--dark"></span>
-				<span class="line--dark"></span>
-				<span class="line--dark"></span>
-				<span class="line--dark"></span>
-
 				<a href="index.html" class="footer__logo logo">
 					<b>FLEX</b>
 					<br>
@@ -263,6 +257,8 @@
 		</div>
 	</footer>
 
+	<link rel="stylesheet" href="css/main.min.css">
 	<script src="js/scripts.min.js"></script>
+
 </body>
 </html>

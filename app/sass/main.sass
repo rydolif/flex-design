@@ -378,6 +378,7 @@
 .nav
 	text-align: right
 	text-transform: uppercase
+	transition: all .3s
 
 	a
 		position: relative
@@ -415,6 +416,15 @@
 			span
 				display: block
 
+	&--active
+		right: 0
+		top: 0
+		right: 0
+		left: 0
+		width: 100%
+		z-index: 1
+		background: rgba($dark, .95)
+		
 .section
 	background: $white
 
